@@ -8,8 +8,13 @@ def load_db_config(config_path):
         return yaml.safe_load(file)
 
 
-db_config_path = '/home/sid/Desktop/copilot/ingest/params.yaml'  # Path to the YAML config file
+# Path to the YAML file containing database connection parameters
+db_config_path = '/home/sid/Desktop/copilot/ingest/params.yaml'
+
+# Load the database connection parameters from the YAML file
 db_params = load_db_config(db_config_path)['pandas']
+
+# Extract the required parameters from the loaded configuration
 db_user = db_params['user']
 db_password = db_params['password']
 db_database = db_params['database']
