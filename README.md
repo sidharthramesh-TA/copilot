@@ -13,6 +13,8 @@ To get started we would need
 
 # Prompts
 
+With prompts *Context is King*
+
 Two ways of using Copilot prompts. 
 
 First is inline VS Code, where you're typing youre code logic in VS Code and it suggests generic syntax, this can be seen as an extention of code-completion or intellisense. 
