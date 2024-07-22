@@ -1,4 +1,4 @@
-# copilot
+# Copilot
 Github Copilot with DE examples
 
 # Installation
