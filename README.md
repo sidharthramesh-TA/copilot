@@ -13,7 +13,7 @@ To get started we would need
 
 # Prompts
 
-With prompts **Context is King**
+With prompts **Context is King**. The more context user provides makes it easier for the LLM to get the right type of attention from the regressed data that it has got, allowing it to produce a wellformed in-context output
 
 Two ways of using Copilot prompts. 
 
