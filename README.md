@@ -13,7 +13,7 @@ To get started we would need
 
 # Prompts
 
-With prompts *Context is King*
+With prompts **Context is King**
 
 Two ways of using Copilot prompts. 
 
