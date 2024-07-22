@@ -11,6 +11,8 @@ To get started we would need
 2. Github Copilot - This is a paid extension and will require you to put in pay information
 3. Github Copilot Chat - This extension allows us to interact with Copilot like ChatGPT
 
+Github Copilot offers a 30 day trial and after that is priced at 10$/month
+
 # Prompts
 
 With prompts **Context is King**. The more context user provides makes it easier for the LLM to get the right type of attention from the regressed data that it has got, allowing it to produce a wellformed in-context output
