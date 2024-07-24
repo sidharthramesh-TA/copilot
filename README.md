@@ -27,7 +27,7 @@ Second is to chat in the Copilot prompt and that generates logic in response to 
 
 When writing prompts for GitHub Copilot, it's important to be clear and concise to guide the AI effectively. Here are the key mechanics and tips for writing effective Copilot prompts:
 
-1. Be Specific
+### Be Specific
 
 Provide detailed and specific instructions to help Copilot generate the desired code. Vague prompts can lead to generic or irrelevant suggestions.
 
@@ -36,7 +36,7 @@ Example:
     Vague: "Write a function."
     Specific: "Write a Python function that takes a list of numbers and returns a list of those numbers squared."
 
-2. Define Context
+### Define Context
 
 Explain the context in which the code will be used. This helps Copilot understand the purpose and scope of the code.
 
@@ -44,7 +44,7 @@ Example:
 
     "Write a Python script to parse a CSV file containing sales data and calculate the total sales for each product."
 
-3. Provide Examples
+### Provide Examples
 
 Giving examples of inputs and expected outputs can help Copilot understand what you want to achieve.
 
@@ -56,7 +56,7 @@ Example:
 # Example output: [1, 4, 9, 16]
 ```
 
-4. Refine Prompt
+### Refine Prompt
 
 Start with a basic prompt and refine it iteratively based on the initial output you get from Copilot. Adjust the prompt to correct or enhance the code generation.
 
