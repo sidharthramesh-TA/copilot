@@ -15,7 +15,7 @@ Github Copilot offers a 30 day trial and after that is priced at 10$/month
 
 # Prompts
 
-With prompts **Context is King**. The more context user provides makes it easier for the LLM to get the right type of attention from the regressed data that it has got, allowing it to produce a wellformed in-context output
+With prompts **Context is King**. The more the context user provides, the easier it is for the LLM to get the right type of attention from its memory, allowing it to produce a wellformed in-context output
 
 Two ways of using Copilot. 
 
