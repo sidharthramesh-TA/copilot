@@ -82,7 +82,7 @@ Notice majority of prompting is context driven action oriented sentences, the mo
 # Step 4: Write the processed dataframe into Postgres DB
 ```
 
-
+The reason for placing such importance on formulating Prompts is that LLMs have a large base of parameters to draw from, furthermore Copilot is a **finetuned LLM** and by that what I mean is its trained on the specific task of providing output that are relatable to software development. Context that we provide as input helps Copilot to formulate attention which inturn allows it to draw from its knowledgebase that directly applies to the given input problem. 
 
 
 
