@@ -62,11 +62,21 @@ Start with a basic prompt and refine it iteratively based on the initial output 
 
 Example:
 
-    Initial Prompt: "Write a function to check if a number is prime."
-    Refined Prompt: "Write a Python function to check if a number is prime. The function should return 'True' for prime numbers and 'False' for non-prime numbers. Optimize it to handle large numbers efficiently."
+    Initial Prompt: "Write a function to load file onto table"
+    Refined Prompt: "Write a Python function to load data from a csv file onto a postgres table. The function should take in parameterized values for Database connections and have input argument for specifying CSV file location. Use Pandas and Pscycopg2 to prepare the dataframe and ingest it into Postgres"
 
-Notice majority of prompting is context driven action oriented sentences, the more verbose instruction you give to CoPilot, the better its output. For Data Engineering use cases the context provided should include Data Formats, source and target table formats and steps involved for programming logic 
+Notice majority of prompting is context driven action oriented sentences, the more verbose instruction you give to CoPilot, the better its output. For Data Engineering use cases the context provided should include 
 
+1. Data Formats
+2. source and target table formats
+3. steps involved for programming logic Like
+   
+```
+# Step 1: Load data from a CSV file into a Dataframe
+# Step 2: Check for Null values
+# Step 3: Create a new column that adds Col A + Col B and name it total sales
+# Step 4: Write the processed dataframe into Postgres DB
+```
 
 
 
