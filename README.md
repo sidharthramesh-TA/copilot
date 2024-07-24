@@ -36,7 +36,7 @@ Example:
     Vague: "Write a function."
     Specific: "Write a Python function that takes a list of numbers and returns a list of those numbers squared."
 
-2. Define the Context
+2. Define Context
 
 Explain the context in which the code will be used. This helps Copilot understand the purpose and scope of the code.
 
@@ -56,7 +56,7 @@ Example:
 # Example output: [1, 4, 9, 16]
 ```
 
-4. Refine the Prompt
+4. Refine Prompt
 
 Start with a basic prompt and refine it iteratively based on the initial output you get from Copilot. Adjust the prompt to correct or enhance the code generation.
 
