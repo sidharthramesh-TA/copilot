@@ -63,9 +63,13 @@ Start with a basic prompt and refine it iteratively based on the initial output 
 Example:
 
     Initial Prompt: "Write a function to load file onto table"
-    Refined Prompt: "Write a Python function to load data from a csv file onto a postgres table. The function should take in parameterized values for Database connections and have input argument for specifying CSV file location. Use Pandas and Pscycopg2 to prepare the dataframe and ingest it into Postgres"
+    Refined Prompt: "Write a Python function to load data from a csv file onto a postgres table. 
+    The function should take in parameterized values for Database connections and have input argument for specifying CSV file location. 
+    Use Pandas and Pscycopg2 to prepare the dataframe and ingest it into Postgres"
 
-Notice majority of prompting is context driven action oriented sentences, the more verbose instruction you give to CoPilot, the better its output. For Data Engineering use cases the context provided should include 
+Notice majority of prompting is context driven action oriented sentences, the more verbose instruction you give to CoPilot, the better its output. 
+
+### For Data Engineering use cases the context provided should include 
 
 1. Data Formats
 2. source and target table formats
