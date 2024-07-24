@@ -23,9 +23,9 @@ First is inline VS Code, where you're typing youre code logic in VS Code and it 
 
 Second is to chat in the Copilot prompt and that generates logic in response to the context that was input. 
 
-# Mechanics of Prompts
+# Mechanics of Prompt
 
-When writing prompts for GitHub Copilot, it's important to be clear and concise to guide the AI effectively. Here are the key mechanics and tips for writing effective Copilot prompts:
+When writing prompts for GitHub Copilot, it's all about being clear and give enough context to guide the AI effectively. Here are the key mechanics for writing effective Copilot prompts:
 
 ### Be Specific
 
@@ -64,6 +64,9 @@ Example:
 
     Initial Prompt: "Write a function to check if a number is prime."
     Refined Prompt: "Write a Python function to check if a number is prime. The function should return 'True' for prime numbers and 'False' for non-prime numbers. Optimize it to handle large numbers efficiently."
+
+Notice majority of prompting is context driven action oriented sentences, the more verbose instruction you give to CoPilot, the better its output. For Data Engineering use cases the context provided should include Data Formats, source and target table formats and steps involved for programming logic 
+
 
 
 
