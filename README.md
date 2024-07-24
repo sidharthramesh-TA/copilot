@@ -17,14 +17,55 @@ Github Copilot offers a 30 day trial and after that is priced at 10$/month
 
 With prompts **Context is King**. The more context user provides makes it easier for the LLM to get the right type of attention from the regressed data that it has got, allowing it to produce a wellformed in-context output
 
-Two ways of using Copilot prompts. 
+Two ways of using Copilot. 
 
 First is inline VS Code, where you're typing youre code logic in VS Code and it suggests generic syntax, this can be seen as an extention of code-completion or intellisense. 
 
 Second is to chat in the Copilot prompt and that generates logic in response to the context that was input. 
 
-# Prompts
+# Mechanics of Prompts
 
-_explain_ : used to explain selected code snippet
+When writing prompts for GitHub Copilot, it's important to be clear and concise to guide the AI effectively. Here are the key mechanics and tips for writing effective Copilot prompts:
+
+1. Be Specific
+
+Provide detailed and specific instructions to help Copilot generate the desired code. Vague prompts can lead to generic or irrelevant suggestions.
+
+Example:
+
+    Vague: "Write a function."
+    Specific: "Write a Python function that takes a list of numbers and returns a list of those numbers squared."
+
+2. Define the Context
+
+Explain the context in which the code will be used. This helps Copilot understand the purpose and scope of the code.
+
+Example:
+
+    "Write a Python script to parse a CSV file containing sales data and calculate the total sales for each product."
+
+3. Provide Examples
+
+Giving examples of inputs and expected outputs can help Copilot understand what you want to achieve.
+
+Example:
+
+```
+# Function to square numbers in a list
+# Example input: [1, 2, 3, 4]
+# Example output: [1, 4, 9, 16]
+```
+
+4. Refine the Prompt
+
+Start with a basic prompt and refine it iteratively based on the initial output you get from Copilot. Adjust the prompt to correct or enhance the code generation.
+
+Example:
+
+    Initial Prompt: "Write a function to check if a number is prime."
+    Refined Prompt: "Write a Python function to check if a number is prime. The function should return 'True' for prime numbers and 'False' for non-prime numbers. Optimize it to handle large numbers efficiently."
+
+
+
 
 
