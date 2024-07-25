@@ -211,7 +211,7 @@ can you please create a markdown file that can give a one liner explanation to t
 
 ```
 
-# Exercise 4 - Data Lineage
+# Exercise 4 - Data Lineage And Table Relationships
 
 While Copilot does not yet have vizualization ability that Commercial ETL tools have for Data Lineage, it can provide a text based relationship between tables and columns, this would require the entire schema to be loaded onto the Copilot chat and then the prompt should establish the context of Table syntax and specify the column at the View level for which you'd want to see the Lineage. 
 
@@ -219,6 +219,15 @@ While Copilot does not yet have vizualization ability that Commercial ETL tools 
 P1
 
 Can you please show the Data Lineage for the column full_name in the customer_product_sales view using the Lineage.sql file as the context and show the columns that were used to derive the full_name column and show the Lineage all the way till landing tables using --> to draw relationship between the tables ?
+
+P2
+Can you please use the table_relationship.sql file and describe how many tables have been reffered to in it ?
+
+P3
+Can you please describe if there is any relationships between the tables ?
+
+P4
+Can you please use a line diagram to demonstrate the relationships between the tables with the columns that link them ?
 
 ```
 
