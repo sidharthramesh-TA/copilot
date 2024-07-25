@@ -147,8 +147,8 @@ P3
 Can you please create the code snippet needed to ingest Data from the CSV files into Postgres Landing tables using Pyspark ?
 
 P4
-Can you please create a Reporting View that takes the data from the dimension and fact tables and joins them to give a full picture of Customer
-, Product and Orders so that the reporting team can use the view for further analysis ?
+Can you please create a Reporting View that takes the data from the dimension and fact tables and joins them to
+give a full picture of Customer, Product and Orders so that the reporting team can use the view for further analysis ?
 
 P5
 Can you please create a 10 row csv with fields input that satisfies the 3 landing tables - Customers
