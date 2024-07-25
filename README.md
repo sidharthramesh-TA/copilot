@@ -156,5 +156,14 @@ Can you please create a 10 row csv with fields input that satisfies the 3 landin
 
 ```
 
+By the above prompts we now have a relatively simple pipeline that loads CSVs into Postgres Database
+
+![Blank diagram - Page 1 (19)](https://github.com/user-attachments/assets/23cc5adf-c855-468a-bdcc-4e10da466cdc)
+
+
+
+
+
+
 
 
