@@ -183,7 +183,203 @@ Can you please help refactor the above code snippet
 
 
 
+```
 
+
+
+SELECT c.CustomerID, c.CustFirstName, c.CustLastName
+FROM Customers AS c
+INNER JOIN
+(SELECT DISTINCT Orders.CustomerID
+FROM Orders AS o
+INNER JOIN Order_Details AS od
+ON o.OrderNumber = oc.OrderNumber
+INNER JOIN Products AS p
+ON p.ProductNumber = od.ProductNumber
+WHERE p.ProductName = 'Skateboard') AS OSk
+ON c.CustomerID = OSk.CustomerID
+INNER JOIN
+(SELECT DISTINCT Orders.CustomerID
+FROM Orders AS o
+INNER JOIN Order_Details AS od
+ON o.OrderNumber = od.OrderNumber
+INNER JOIN Products AS p
+ON p.ProductNumber = od.ProductNumber
+WHERE p.ProductName = 'Helmet') AS OHel
+ON c.CustomerID = OHel.CustomerID
+INNER JOIN
+(SELECT DISTINCT Orders.CustomerID
+FROM Orders AS o
+INNER JOIN Order_Details AS od
+ON o.OrderNumber = od.OrderNumber
+INNER JOIN Products AS p
+ON p.ProductNumber = od.ProductNumber
+WHERE p.ProductName = 'Knee Pads') AS OKn
+ON c.CustomerID = OKn.CustomerID
+INNER JOIN
+(SELECT DISTINCT Orders.CustomerID
+FROM Orders AS o
+INNER JOIN Order_Details AS od
+ON o.OrderNumber = od.OrderNumber
+INNER JOIN Products AS p
+ON p.ProductNumber = od.ProductNumber
+WHERE p.ProductName = 'Gloves') AS OGl
+ON c.CustomerID = OGl.CustomerID;
+
+
+
+
+SELECT Recipes.RecipeTitle
+FROM Recipes
+WHERE EXISTS (
+SELECT NULL
+FROM Ingredients
+INNER JOIN Recipe_Ingredients
+ON Ingredients.IngredientID =
+Recipe_Ingredients.IngredientID
+WHERE Ingredients.IngredientName = 'Beef'
+AND Recipe_Ingredients.RecipeID = Recipes.RecipeID
+) AND EXISTS (
+SELECT NULL
+FROM Ingredients
+INNER JOIN Recipe_Ingredients
+ON Ingredients.IngredientID =
+Recipe_Ingredients.IngredientID
+WHERE Ingredients.IngredientName = 'Garlic'
+AND Recipe_Ingredients.RecipeID = Recipes.RecipeID
+);
+
+
+
+
+
+SELECT CustProd.CustomerID, CustProd.CustFirstName,
+CustProd.CustLastName, CustProd.ProductNumber,
+CustProd.ProductName,
+(CASE WHEN OrdDet.OrderCount > 0
+THEN 'You purchased this!'
+ELSE ' '
+END) AS ProductOrdered
+FROM
+(SELECT c.CustomerID, c.CustFirstName, c.CustLastName,
+p.ProductNumber, p.ProductName, p.ProductDescription
+FROM Customers AS c, Products AS p) AS CustProd
+LEFT JOIN
+(SELECT o.CustomerID, od.ProductNumber,
+COUNT(*) AS OrderCount
+FROM Orders AS o
+INNER JOIN Order_Details AS od
+ON o.OrderNumber = od.OrderNumber
+GROUP BY o.CustomerID, od.ProductNumber) AS OrdDet
+ON CustProd.CustomerID = OrdDet.CustomerID
+AND CustProd.ProductNumber = OrdDet.ProductNumber
+ORDER BY CustProd.CustomerID, CustProd.ProductName;
+
+
+
+
+WITH CustPreferences AS (
+SELECT c.CustomerID, c.CustFirstName, c.CustLastName,
+MAX((CASE WHEN mp.PreferenceSeq = 1
+THEN mp.StyleID
+ELSE Null END)) AS FirstPreference,
+MAX((CASE WHEN mp.PreferenceSeq = 2
+THEN mp.StyleID
+ELSE Null END)) AS SecondPreference,
+MAX((CASE WHEN mp.PreferenceSeq = 3
+THEN mp.StyleID
+ELSE Null END)) AS ThirdPreference
+FROM Musical_Preferences AS mp
+INNER JOIN Customers AS c
+ON mp.CustomerID = c.CustomerID
+GROUP BY c.CustomerID, c.CustFirstName, c.CustLastName
+),
+EntStrengths AS (
+SELECT e.EntertainerID, e.EntStageName,
+MAX((CASE WHEN es.StyleStrength = 1
+THEN es.StyleID
+ELSE Null END)) AS FirstStrength,
+MAX((CASE WHEN es.StyleStrength = 2
+THEN es.StyleID
+ELSE Null END)) AS SecondStrength,
+MAX((CASE WHEN es.StyleStrength = 3
+THEN es.StyleID
+ELSE Null END)) AS ThirdStrength
+FROM Entertainer_Styles AS es
+INNER JOIN Entertainers AS e
+ON es.EntertainerID = e.EntertainerID
+GROUP BY e.EntertainerID, e.EntStageName
+)S
+ELECT CustomerID, CustFirstName, CustLastName,
+EntertainerID, EntStageName
+FROM CustPreferences
+CROSS JOIN EntStrengths
+WHERE (
+FirstPreference = FirstStrength
+AND SecondPreference = SecondStrength
+) OR (
+SecondPreference = FirstStrength
+AND FirstPreference = SecondStrength
+)
+ORDER BY CustomerID;
+
+
+
+select max(case dw when 2 then dm end) as Mo,
+max(case dw when 3 then dm end) as Tu,
+max(case dw when 4 then dm end) as We,
+max(case dw when 5 then dm end) as Th,
+max(case dw when 6 then dm end) as Fr,
+max(case dw when 7 then dm end) as Sa,
+max(case dw when 1 then dm end) as Su
+from (
+select *
+ from (
+ select cast(date_trunc('month',current_date) as date)+x.id,
+ to_char(
+ cast(
+ date_trunc('month',current_date)
+ as date)+x.id,'iw') as wk,
+ to_char(
+ cast(
+ date_trunc('month',current_date)
+ as date)+x.id,'dd') as dm,
+ cast(
+ to_char(
+ cast(
+ date_trunc('month',current_date)
+ as date)+x.id,'d') as integer) as dw,
+ to_char(
+ cast(
+ date_trunc('month',current_date)
+ as date)+x.id,'mm') as curr_mth,
+ to_char(current_date,'mm') as mth
+from generate_series (0,31) x(id)
+) x
+where mth = curr_mth
+) y
+group by wk
+order by wk
+
+
+with x (tree,mgr,depth)
+as (
+select cast(ename as varchar(100)),
+mgr, 0
+from emp
+where ename = 'MILLER'
+union all
+select cast(x.tree+'-->'+e.ename as varchar(100)),
+e.mgr, x.depth+1
+ from emp e, x
+ where x.mgr = e.empno
+ )
+ select tree leaf___branch___root
+ from x
+ where depth = 2
+
+
+```
 
 
 
