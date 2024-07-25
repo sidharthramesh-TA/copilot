@@ -200,15 +200,43 @@ Is this method running with the best Big(O) value ?
 
 # Exercise 3 - Documentation
 
-You can use Copilot to create Markdown files
+You can use Copilot to create documentation for code written, the more common example is iniline commenting. While inline code commenting is great, you can also use the chat feature to add python files that may have complicated logic and ask copilot to create a exhaustive Markdown file with explanation of all the methods and classes used. This is beneficial for code documentation and collaborations  
 
 ```
 Prompt 1
 Add the files to the Copilot chat and prompt - Please create a markdown file that will explain the repo to a new team member
 
+P 2
+can you please create a markdown file that can give a one liner explanation to the contents of the data gristle folder ?
 
 ```
 
+# Exercise 4 - Data Lineage
+
+While Copilot does not yet have vizualization ability that Commercial ETL tools have for Data Lineage, it can provide a text based relationship between tables and columns, this would require the entire schema to be loaded onto the Copilot chat and then the prompt should establish the context of Table syntax and specify the column at the View level for which you'd want to see the Lineage. 
+
+```
+P1
+
+Can you please show the Data Lineage for the column full_name in the customer_product_sales view using the Lineage.sql file as the context and show the columns that were used to derive the full_name column and show the Lineage all the way till landing tables using --> to draw relationship between the tables ?
+
+```
+
+# Exercise 5 - R to Python
+
+Copilot can work with multiple languages, upto this point we've really only looked at SQL and Python as they are the common denominators in Data Engg. However, it can work with other languages as well like Scala, Java, R and Javascript. Copilot having the vast pool of data to draw from Github has made it polyglot and has given it the ability to be profecient with pretty much all the languages that have an extensive codebase. One potential application that is of particular interest is Code coversions, more widely used for R to Python conversions. 
+
+```
+P1
+Can you please convert the following R code to Python ?
+
+P2
+Can you please create a pytest for the converted Python code ?
+
+P3
+Can you please use the files added to the chat from the Rcode folder and convert them into python ?
+
+```
 
 
 
