@@ -187,8 +187,27 @@ Can you please explain recursive WITH clause used in this sql
 
 ```
 
+P 1
+Explain the file
+
+P 2 
+Are any methods common between the two files
+
+P 3
+Is this method running with the best Big(O) value ?
+
 ```
 
+# Exercise 3 - Documentation
+
+You can use Copilot to create Markdown files
+
+```
+Prompt 1
+Add the files to the Copilot chat and prompt - Please create a markdown file that will explain the repo to a new team member
+
+
+```
 
 
 
