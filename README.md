@@ -93,21 +93,37 @@ Github copilot's functionality can be extended by adding extensions in VS Code. 
 Copilot also has trigger words that invoke specific functionalities such as 
 
 `@workspace` - Ask about your workspace
+
  `/explain` - Explain how the code in your active editor works
+
  `/tests` - Generate unit tests for the selected code
+ 
  `/fix` - Propose a fix for the problems in the selected code
+ 
  `/new` - Scaffold code for a new workspace
+ 
  `/newNotebook` - Create a new Jupyter Notebook
+
 `@vscode` - Ask questions about VS Code
+
  `/search` - Generate query parameters for workspace search
+
 `@terminal` - Ask how to do something in the terminal
+
  `/explain` - Explain something in the terminal
+
 `@pg` - Let's have some fun with Postgres
+
  `/schema` - Helps you build out your database schema.
+
  `/conn` - Change the connection
+
  `/help` - How to use this extension
+ 
  `/out` - Set the output format
+ 
  `/show` - Shows all tables. Or, pass in a table name to see the columns
+ 
  `/fix` - Fixes the last error encountered
 
 
