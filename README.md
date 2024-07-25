@@ -140,21 +140,19 @@ which will be of SCD type 2 to Dimension and Fact Tables.
 Please generate data flow example for customers, products and orders
 
 P2
-Can you please create the code snippet needed to ingest Data from the CSV files into Postgres Landing tables using Pandas library
+Can you please create the code snippet needed to ingest Data from the CSV files into Postgres Landing tables
+using Pandas library
 
 P3
 Can you please create the code snippet needed to ingest Data from the CSV files into Postgres Landing tables using Pyspark ?
 
 P4
-Can you please create a Reporting View that takes the data from the dimension and fact tables and joins them to give a full picture of Customer, Product and Orders so that the reporting team can use the view for further analysis ?
+Can you please create a Reporting View that takes the data from the dimension and fact tables and joins them to give a full picture of Customer
+, Product and Orders so that the reporting team can use the view for further analysis ?
 
 P5
-Can you please create a 10 row csv with fields input that satisfies the 3 landing tables - Customers, products and orders so that the pandas code snippet can be used to ingest the csv into corresponding landing tables ?
-
-
-
-
-
+Can you please create a 10 row csv with fields input that satisfies the 3 landing tables - Customers
+, products and orders so that the pandas code snippet can be used to ingest the csv into corresponding landing tables ?
 
 ```
 
