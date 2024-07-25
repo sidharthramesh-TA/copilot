@@ -71,3 +71,27 @@ def main():
     print('Fibonacci number at position', x, 'is', fib_number)
 
 main()
+
+
+# Example 2
+
+# badly written code
+
+class OldResistor:
+  def __init__(self, ohms):
+    self._ohms = ohms
+  def get_ohms(self):
+    return self._ohms
+  def set_ohms(self, ohms):
+    self._ohms = ohms
+
+# Refactored code
+
+class Resistor:
+  def __init__(self, ohms):
+    self.ohms = ohms
+    self.voltage = 0
+    self.current = 0
+
+
+
