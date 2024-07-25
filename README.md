@@ -156,9 +156,32 @@ Can you please create a 10 row csv with fields input that satisfies the 3 landin
 
 ```
 
-By the above prompts we now have a relatively simple pipeline that loads CSVs into Postgres Database
+By the above prompts we now have a relatively simple pipeline that loads Ecommerce Data into Postgres Database
 
 ![Blank diagram - Page 1 (19)](https://github.com/user-attachments/assets/23cc5adf-c855-468a-bdcc-4e10da466cdc)
+
+# Exercise 2 - Code Refactoring
+
+Since Copilot has the data reposited to it from global software development its not unfair to say that it has seen examples of optimized code written by experianced developers. This has given Copilot the ability to 
+
+1. explain complex code
+2. take patterns from prior examples and apply it to a given problem
+
+This can be gainfully applied to refactoring SQL and Python code snippets that may be complex and badly written. Lets look at an example
+
+### SQL
+
+```
+P 1
+Explain this block of code
+
+P 2
+Can you please help refactor the above code snippet
+
+```
+
+
+
 
 
 
