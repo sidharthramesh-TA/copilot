@@ -60,7 +60,7 @@ df_sales['expiration_date'] = pd.Timestamp('9999-12-31')
 df_sales['is_current'] = 'y'
 
 # Write data to staging table
-df_sales.to_sql('staging_sales_fact', engine, if_exists='replace', index=False)
+df_sales.to_sql('staging_sales_fact', engine, if_exists='append', index=False)
 
 print(f'Data ingested into staging table {df_products.count()}')
 

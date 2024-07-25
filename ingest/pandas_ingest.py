@@ -15,8 +15,8 @@ db_database = db_params['database']
 db_ip = db_params['host']
 
 # Replace these variables with your actual file path and database credentials
-csv_file_path = '/home/sid/Desktop/copilot/data/date.csv'
-table_name = 'date_dim'
+csv_file_path = '/home/sid/Desktop/copilot/data/customers.csv'
+table_name = 'landing_customers'
 
 # Read CSV file
 df = pd.read_csv(csv_file_path)
