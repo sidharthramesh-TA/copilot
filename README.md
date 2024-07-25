@@ -1,6 +1,6 @@
 # Exploring Github Copilot with DE examples
 
-Copilot is a Large Language Model (LLM) which is fine tuned by Github to provide Code examples and developer support. Its interesting because Github being the developer friendly website has software development data from developers worldwide and that was used to fintetune Microsoft's LLM to give Github Copilot the wisdom of global software development to make a sort of ChatGPT for developers. As the audience here must have invariably interacted with ChatGPT if not directly with Copilot, we are plunging straight into Copilot without delving on how LLMs work or finetuning of LLMs. 
+Copilot is an OpenAI Large Language Model (LLM) which is fine tuned by Github to provide Code examples and developer support. Its interesting because Github being the developer friendly website has software development data from developers worldwide and that was used to fintetune Microsoft's LLM to give Github Copilot the wisdom of global software development to make a sort of ChatGPT for developers. As the audience here must have invariably interacted with ChatGPT if not directly with Copilot, we are plunging straight into Copilot without delving on how LLMs work or finetuning of LLMs. 
 
 
 # Installation
@@ -83,6 +83,35 @@ Notice majority of prompting is context driven action oriented sentences, the mo
 ```
 
 The reason for placing such importance on formulating Prompts is that LLMs have a large base of parameters to draw from, furthermore Copilot is a **finetuned LLM** and by that what I mean is its trained on the specific task of providing output that are relatable to software development. Context that we provide as input helps Copilot to formulate attention which inturn allows it to draw from its knowledgebase that directly applies to the given input problem. 
+
+# Extensions
+
+Github copilot's functionality can be extended by adding extensions in VS Code. Some popular ones related to Databases are MSSQL extension and Postgres Extention. New VSCode Copilot Extensions can also be created with custom finetuning. Tools like Databricks and Snowflake already have integrated a conversational assistant into their environment and copilot extensions serve a similar purpose of extending to Databases where a native assistant might not be available yet. 
+
+# Action Words
+
+Copilot also has trigger words that invoke specific functionalities such as 
+
+`@workspace` - Ask about your workspace
+ `/explain` - Explain how the code in your active editor works
+ `/tests` - Generate unit tests for the selected code
+ `/fix` - Propose a fix for the problems in the selected code
+ `/new` - Scaffold code for a new workspace
+ `/newNotebook` - Create a new Jupyter Notebook
+`@vscode` - Ask questions about VS Code
+ `/search` - Generate query parameters for workspace search
+`@terminal` - Ask how to do something in the terminal
+ `/explain` - Explain something in the terminal
+`@pg` - Let's have some fun with Postgres
+ `/schema` - Helps you build out your database schema.
+ `/conn` - Change the connection
+ `/help` - How to use this extension
+ `/out` - Set the output format
+ `/show` - Shows all tables. Or, pass in a table name to see the columns
+ `/fix` - Fixes the last error encountered
+
+
+
 
 
 
