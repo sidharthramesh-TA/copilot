@@ -131,9 +131,10 @@ Copilot also has trigger words that invoke specific functionalities such as
 To demonstrate Copilot's application in Data Engineering tasks we look at ETL Code generation. Consider the following pipeline where we have Data flowing from Landing, Staging, Dimension and Fact tables which ultimately feed Reporting Views for a ECommerce company. We will look at Customers, Products and Sales.  
 
 Prompt 1
-`
+
+```
 I am looking to develop a simple data flow for an ecommerce company that will take data that is ingested in CSV and will ingest into Postgres Landing Table. The data flow will go from Landing Table which will be of SCD type 1 to Staging Table which will be of SCD type 2 to Dimension and Fact Tables. Please generate data flow example for customers, products and orders
-`
+```
 
 
 
