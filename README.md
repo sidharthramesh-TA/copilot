@@ -186,7 +186,20 @@ Can you please explain recursive WITH clause used in this sql
 ### Python
 
 ```
+Example 1
+class OldResistor:
+    def __init__(self, ohms):
+        self._ohms = ohms
+    def get_ohms(self):
+        return self._ohms
+    def set_ohms(self, ohms):
+        self._ohms = ohms
 
+class Resistor:
+    def __init__(self, ohms):
+        self.ohms = ohms
+        self.voltage = 0
+        self.current = 0
 
 ```
 
